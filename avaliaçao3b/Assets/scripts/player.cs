@@ -21,7 +21,7 @@ public class Player : Personagem
         andando = false;
         
         if (arma.rotation.eulerAngles.z > -90 
-            && arma.rotation.eulerAngles.z < 90)
+            && arma.rotation.eulerAngles.z< 90)
         {
             spriteRenderer.flipX = false;
         }
