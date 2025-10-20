@@ -49,7 +49,7 @@ public class Arma : MonoBehaviour
        
         Debug.Log("Angilo: "+angle);
         
-        cursor.transform.position = new Vector3(mouse.x, mouse.y, cursor.transform.position.z);
+//        cursor.transform.position = new Vector3(mouse.x, mouse.y, cursor.transform.position.z);
         
         Debug.DrawLine(transform.position, mouse , Color.red);
         
