@@ -10,9 +10,9 @@ public class Inimigo : Personagem
     [SerializeField] private Transform posicaoDoPlayer;
     
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
+ //   private Animator animator;
 
-    private bool andando = false;
+   // private bool andando = false;
     
     public void setDano(int dano)
     {
@@ -26,19 +26,19 @@ public class Inimigo : Personagem
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+       // animator = GetComponent<Animator>();
         
         if (posicaoDoPlayer == null)
         {
             posicaoDoPlayer =  GameObject.Find("Player").transform;
         }
         
-//        raioDeVisao = _visaoCollider2D.radius;
+//         raioDeVisao = _visaoCollider2D.radius;
     }
 
     void Update()
     {
-        andando = false;
+        //andando = false;
         
         if (posicaoDoPlayer.position.x - transform.position.x > 0)
         {
@@ -60,7 +60,7 @@ public class Inimigo : Personagem
                 posicaoDoPlayer.transform.position,
                 getVelocidade() * Time.deltaTime);
             
-            andando = true;
+        //    andando = true;
         }
         
         if (getVida() <= 0)

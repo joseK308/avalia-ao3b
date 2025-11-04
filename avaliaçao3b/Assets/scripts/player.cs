@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : Personagem
 {
-    private SpriteRenderer spriteRenderer;
-    private Animator animator;
+ 
+  //  private Animator animator;
     
     private bool andando = false;
     
@@ -12,28 +12,20 @@ public class Player : Personagem
     
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        
+      //  animator = GetComponent<Animator>();
     }
     
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Tiro!");
+            Instantiate(Bala, transform.position, transform.rotation);
+        }
         andando = false;
         
-        if (arma.rotation.eulerAngles.z > -90 
-            && arma.rotation.eulerAngles.z< 90)
-        {
-            spriteRenderer.flipX = false;
-        }
-        
-        if (arma.rotation.eulerAngles.z > 90 
-            && arma.rotation.eulerAngles.z < 270)
-        {
-            spriteRenderer.flipX = true;
-        }
-
-
-
 
         if (Input.GetKey(KeyCode.W))
         {
