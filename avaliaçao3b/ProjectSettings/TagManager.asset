@@ -8,6 +8,7 @@ TagManager:
   - Arma
   - bala
   - mira
+  - arma
   layers:
   - Default
   - TransparentFX

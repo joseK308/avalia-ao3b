@@ -5,26 +5,18 @@ public class Player : Personagem
 {
  
   //  private Animator animator;
-    
-    private bool andando = false;
+  private bool andando = false;
     
     public Transform arma;
     
     void Start()
     {
         
-      //  animator = GetComponent<Animator>();
+    
     }
     
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Tiro!");
-            Instantiate(Bala, transform.position, transform.rotation);
-        }
-        andando = false;
         
 
         if (Input.GetKey(KeyCode.W))
@@ -62,6 +54,6 @@ public class Player : Personagem
             //gameObject.SetActive(false);
         }
         
-//        animator.SetBool("Andando", andando);
+
     }
 }
