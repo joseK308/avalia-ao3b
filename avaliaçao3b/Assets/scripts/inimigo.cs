@@ -40,7 +40,7 @@ public class Inimigo : Personagem
     {
         //andando = false;
         
-        if (posicaoDoPlayer.position.x - transform.position.x > 0)
+//        if (posicaoDoPlayer.position.x - transform.position.x > 0)
         {
             spriteRenderer.flipX = false;
         }
